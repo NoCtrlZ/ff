@@ -245,6 +245,8 @@ pub trait PrimeField: Field + From<u64> {
     /// It can be calculated by exponentiating `Self::multiplicative_generator` by `t`,
     /// where `t = (modulus - 1) >> Self::S`.
     fn root_of_unity() -> Self;
+
+    fn wanf(&self) -> [i64; 254];
 }
 
 /// This represents the bits of an element of a prime field.
