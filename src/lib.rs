@@ -246,7 +246,7 @@ pub trait PrimeField: Field + From<u64> {
     /// where `t = (modulus - 1) >> Self::S`.
     fn root_of_unity() -> Self;
 
-    fn wanf(&self) -> [i64; 254];
+    fn wanf(&self, w: u64) -> [i64; 254];
 }
 
 /// This represents the bits of an element of a prime field.
